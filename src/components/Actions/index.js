@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
 
 
     labelButton:{
-        marginTop: 4,
+        marginTop: 7,
         textAlign: 'center',
         fontWeight: 'bold',
         color: '#DADADA'

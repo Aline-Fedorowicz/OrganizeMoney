@@ -43,11 +43,11 @@ export default function CustomTabBar( {state, descriptors, navigation}) {
                 style={styles.buttonTab}
                 >
                     <View style={styles.containerButton}>
-                        <View style={[styles.innerButton, { backgroundColor: isFocused ? "#484846" : "transparent"}]}>
+                        <View style={[styles.innerButton, { backgroundColor: isFocused ? "rgb(72 21 9)" : "transparent"}]}>
                             <MaterialIcons
                             name={options.tabBarIcon}
                             size={34}
-                            color= {isFocused ? "#990412" : "#535353"}
+                            color= {isFocused ? "rgb(205 70 39)" : "#DADADA"}
                             />
                         </View>
                     </View>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         gap: 8,
         elevation: 10,
-        backgroundColor: "#DADADA",
+        backgroundColor: "rgb(98, 97, 90)",
         opacity: 0.9,
         borderRadius: 99
 

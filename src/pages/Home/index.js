@@ -56,12 +56,15 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#454546',
+    backgroundColor: 'rgb(44 44 44)',
   },
   title:{
     fontSize: 18,
     fontWeight: 'bold',
     margin: 14,
+    marginBottom: 25,
+    marginTop: 25,
+    color: '#DADADA'
   },
 
   list:{

@@ -11,6 +11,11 @@ export function Routes(){
         <Tab.Navigator 
         screenOptions={{
             headerShown: false,
+            headerStyle: {
+                backgroundColor: '#993002',
+                borderBottomWidth: 0,
+                
+            },
             tabBarHideOnKeyboard: true,
             tabBarShowLabel: false,
             tabBarActiveTintColor: "#121212",

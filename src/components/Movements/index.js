@@ -40,6 +40,7 @@ export default function Movements({data}) {
 
            {data.type === 1 ? `R$ ${data.value} ` : `R$-${data.value} `}
            
+           
            </MotiText>
         </AnimatePresence>
      ): (
@@ -93,7 +94,8 @@ const styles = StyleSheet.create({
     label:{
         fontWeight: 'bold',
         fontSize: 16,
-        color: '#DADADA'
+        color: '#DADADA',
+        marginTop: 7
     },
 
     value:{
