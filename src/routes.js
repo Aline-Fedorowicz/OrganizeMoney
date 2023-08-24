@@ -6,12 +6,14 @@ import Store from './pages/Store'
 import CustomTabBar from './components/CustomTabBar'
 import Welcome from './pages/Welcome'
 import SignIn from './pages/SignIn'
+import BarNavigation from './pages/BarNavigation'
+
 
 
 
 
 const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
+
 
 export function Routes() {
     return (
@@ -29,8 +31,8 @@ export function Routes() {
             />
 
             <Stack.Screen
-                name="Home"
-                component={Home}
+                name="BarNavigation"
+                component={BarNavigation}
                 options={{ headerShown: false }}
             />
 
@@ -38,6 +40,7 @@ export function Routes() {
 
 
         </Stack.Navigator>
+      
 
 
 

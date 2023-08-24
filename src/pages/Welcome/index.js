@@ -23,7 +23,7 @@ export default function Welcome() {
       </View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-        <Text style={styles.title}>Monitore seus gastos de qualquer lugar</Text>
+        <Text style={styles.title}>Monitore suas finanças de qualquer lugar</Text>
         <Text style={styles.text}>Faça o login para começar</Text>
 
         <TouchableOpacity 

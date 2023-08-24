@@ -6,11 +6,12 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useNavigation } from '@react-navigation/native'
 import * as Animatable from 'react-native-animatable'
 import { Ionicons } from '@expo/vector-icons'
+import BarNavigation from '../BarNavigation';
 
 
 const schema = yup.object({
   email: yup.string().email("Email Invalido").required("Informe seu email"),
-  password: yup.string().min(6, "A senha deve ter pelo menos 6 digitos").required("Informe sua senha")
+  password: yup.string().min(6, "A senha deve ter pelo menos 6 digitos").max(10, "A senha deve conter até 10 digitos").required("Informe sua senha")
 })
 
 
@@ -53,7 +54,7 @@ export default function SignIn() {
     //   console.log(data)
     // }
 
-    navigation.navigate('Home')
+    navigation.navigate('BarNavigation')
   }
 
   return (
