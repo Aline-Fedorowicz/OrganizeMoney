@@ -4,6 +4,7 @@ import Balance from '../../components/Balance';
 import Movements from '../../components/Movements';
 import Actions from '../../components/Actions';
 
+
 const list = [
   {
     id:1,
