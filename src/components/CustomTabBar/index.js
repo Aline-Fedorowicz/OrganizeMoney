@@ -43,7 +43,7 @@ export default function CustomTabBar( {state, descriptors, navigation}) {
                 style={styles.buttonTab}
                 >
                     <View style={styles.containerButton}>
-                        <View style={[styles.innerButton, { backgroundColor: isFocused ? "rgb(72 21 9)" : "transparent"}]}>
+                        <View style={[styles.innerButton, { backgroundColor: isFocused ? "#DADADA" : "transparent"}]}>
                             <MaterialIcons
                             name={options.tabBarIcon}
                             size={34}
