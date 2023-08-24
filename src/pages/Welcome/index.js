@@ -7,11 +7,13 @@ import {
 } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-
+import * as Animatable from 'react-native-animatable'
+import {useNavigation} from '@react-navigation/native'
 
 
 
 export default function Welcome() {
+  const navigation = useNavigation();
   return (
 
     <View style={styles.container}>
@@ -20,15 +22,18 @@ export default function Welcome() {
       <MaterialCommunityIcons name="finance" size={200} color="#DADADA"  />
       </View>
 
-      <View style={styles.containerForm}>
+      <Animatable.View animation="fadeInUp" style={styles.containerForm}>
         <Text style={styles.title}>Monitore seus gastos de qualquer lugar</Text>
         <Text style={styles.text}>Faça o login para começar</Text>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity 
+        style={styles.button}
+        onPress ={ () => navigation.navigate('SignIn') }
+        >
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
 
-      </View>
+      </Animatable.View>
       
 
 
@@ -66,7 +71,7 @@ const styles= StyleSheet.create({
     color: '#DADADA'
   },
   text: {
-    color: '#DADADA'
+    color: '#A9A9A9'
   },
   button:{
     position: 'absolute',
