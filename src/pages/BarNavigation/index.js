@@ -2,8 +2,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from '../Home'
 import Money from '../Money'
-import Store from '../Store'
+import MoneyExpense from '../MoneyExpense'
 import CustomTabBar from '../../components/CustomTabBar'
+
+
 
 const Tab = createBottomTabNavigator();
 
@@ -48,10 +50,10 @@ export default function BarNavigation() {
 
 
             <Tab.Screen
-                name="Store"
-                component={Store}
+                name="MoneyExpense"
+                component={MoneyExpense}
                 options={{
-                    tabBarIcon: "storefront"
+                    tabBarIcon: "money-off"
                 }}
             />
 

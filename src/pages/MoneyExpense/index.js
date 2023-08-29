@@ -7,14 +7,14 @@ import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
 import { FontAwesome5 } from '@expo/vector-icons'; 
 import Home from '../Home';
-import ListBalance from '../../components/FlatListBalance';
+import ListExpense from '../../components/FlatListExense';
 
 
-export default function Money() {
+export default function MoneyExpense() {
   return (
     <View style={styles.container}>
   
-  <ListBalance></ListBalance>
+  <ListExpense></ListExpense>
     </View>
   );   
 }

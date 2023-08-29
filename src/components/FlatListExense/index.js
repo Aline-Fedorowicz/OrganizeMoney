@@ -5,8 +5,8 @@ import Movements from '../../components/Movements';
 import Actions from '../../components/Actions';
 import { useEffect, useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
-import FlatListMoviments from '../../components/FlatListMoviments/index'
-import React from 'react';
+
+
 
 const list = [
   {
@@ -52,7 +52,7 @@ console.log('Entradas', sumOfValues.value)
 
 
 
-export default function Home() {
+export default function ListExpense() {
 
 
 const [load, setLoad] = useState(true)
@@ -66,12 +66,19 @@ console.log('ENTROOU')
 }, [load])
   return (
     <View style={styles.container}>
-      <Header name="Aline Fedorowicz"/>
+   
+<Header name="Aline Fedorowicz"/>
       <Balance saldo={sumOfValues.value} gastos={subOfValues.value}/>
-      <Actions/>
+      <FlatList
 
-      <Text style={styles.title}>Últimas movimentações</Text>
-      <FlatListMoviments/>
+style={styles.list}
+data={saidas}
+keyExtrator={ (item => String (item.id))}
+showsVerticalScrollIndicator={false}
+renderItem={ ({item}) => <Movements data={item}/> }
+
+/>
+     
       
     </View>
   );
