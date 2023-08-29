@@ -47,8 +47,8 @@ const saidas = list.filter((item) => item.type === 0)
 const sumOfValues = entradas.reduce((acumulator, entradas) => acumulator + entradas)
 const subOfValues = saidas.reduce((acumulator, saidas) => acumulator + saidas)
 
-console.log('Gastos', subOfValues.value)
-console.log('Entradas', sumOfValues.value)
+// console.log('Gastos', subOfValues.value)
+// console.log('Entradas', sumOfValues.value)
 
 
 

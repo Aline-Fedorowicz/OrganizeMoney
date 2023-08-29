@@ -4,13 +4,14 @@ import Balance from '../../components/Balance';
 import Movements from '../../components/Movements';
 import Actions from '../../components/Actions';
 import { useEffect, useState } from 'react';
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import FlatListMoviments from '../../components/FlatListMoviments/index'
 import React from 'react';
 
+
 const list = [
   {
-    id:1,
+    id: 1,
     label: 'UberTrip',
     value: 45.00,
     date: '17/12/2023',
@@ -18,17 +19,17 @@ const list = [
   },
 
   {
-    id:2,
+    id: 2,
     label: 'Pix Aline',
-    value: 2500.00,
+    value: 500.00,
     date: '17/12/2023',
     type: 1 //entradas
   },
 
   {
-    id:3,
+    id: 3,
     label: 'Salário',
-    value: 10500.00,
+    value: 500.00,
     date: '18/12/2023',
     type: 1 //entradas
   }
@@ -36,43 +37,70 @@ const list = [
 
 
 
-const entradas = list.filter((item) => item.type === 1)  
-
-const saidas = list.filter((item) => item.type === 0)
-
-
-
-const sumOfValues = entradas.reduce((acumulator, entradas) => acumulator + entradas)
-const subOfValues = saidas.reduce((acumulator, saidas) => acumulator + saidas)
-
-console.log('Gastos', subOfValues.value)
-console.log('Entradas', sumOfValues.value)
-
-
 
 
 
 export default function Home() {
+  const entradas = list.filter((item) => item.type === 1)
 
-
-const [load, setLoad] = useState(true)
-
-
-useEffect (() => {
-window.addEventListener('focus', () => setLoad(!load))
-console.log('ENTROOU')
-
+  const saidas = list.filter((item) => item.type === 0)
   
-}, [load])
+  
+  function calcSumTotal() {
+  
+    let sum = 0
+  
+    for (var i = 0; i < entradas.length; i++) {
+      sum += entradas[i].value;
+  
+      console.log('somaFor', sum)
+    }
+  
+  
+  
+    setSumOfValues(sum)
+  
+  }
+  
+  function calcSubTotal() {
+  
+    let sub = 0
+  
+    for (var i = 0; i < saidas.length; i++) {
+      sub += saidas[i].value;
+  
+      console.log('-for', sub)
+    }
+  
+  
+  
+    setSubOfValues(sub)
+  
+  }
+  
+  const [sumOfValues, setSumOfValues] = useState(0)
+  const [subOfValues, setSubOfValues] = useState(0)
+
+  const [load, setLoad] = useState(true)
+
+
+  useEffect(() => {
+    window.addEventListener('focus', () => setLoad(!load))
+    calcSumTotal()
+    calcSubTotal()
+
+
+
+  }, [load])
   return (
     <View style={styles.container}>
-      <Header name="Aline Fedorowicz"/>
-      <Balance saldo={sumOfValues.value} gastos={subOfValues.value}/>
-      <Actions/>
+      <Header name="Aline Fedorowicz" />
+      <Balance saldo={sumOfValues} gastos={subOfValues} />
+      <Actions />
 
       <Text style={styles.title}>Últimas movimentações</Text>
-      <FlatListMoviments/>
-      
+      <FlatListMoviments />
+
     </View>
   );
 }
@@ -82,7 +110,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgb(44 44 44)',
   },
-  title:{
+  title: {
     fontSize: 18,
     fontWeight: 'bold',
     margin: 14,
@@ -91,7 +119,7 @@ const styles = StyleSheet.create({
     color: '#DADADA'
   },
 
-  list:{
+  list: {
     marginStart: 14,
     marginEnd: 14,
 

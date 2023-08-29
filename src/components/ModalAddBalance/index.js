@@ -41,7 +41,7 @@ export default function ModalBalance() {
 
             <View style={styles.item}>
                 <TouchableOpacity onPress={onOpen}>
-                    <Text style={styles.itemTitle}> Adicionar Entrada $</Text>
+                    <Text style={styles.itemTitle}> Adicionar Entrada</Text>
                 </TouchableOpacity>
 
                 <Modalize 

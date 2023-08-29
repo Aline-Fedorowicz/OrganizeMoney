@@ -31,8 +31,7 @@ export default function Balance({saldo, gastos}) {
             <Text style={styles.itemTitle}>Saldo</Text>
                 <View style={styles.content}>
 
-                    <Text style={styles.currencySymbol}>R$</Text>
-                    <Text style={styles.balance}>{saldo}</Text>
+                    <Text style={styles.balance}>{saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Text>
 
                 </View>
             </View>
@@ -41,8 +40,7 @@ export default function Balance({saldo, gastos}) {
             <Text style={styles.itemTitle}>Gastos</Text>
                 <View style={styles.content}>
 
-                    <Text style={styles.currencySymbol}>R$</Text>
-                    <Text style={styles.expenses}>{gastos}</Text>
+                    <Text style={styles.expenses}>{gastos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Text>
 
                 </View>
             </View>
