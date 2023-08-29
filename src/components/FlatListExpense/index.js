@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native';
-import Header from '../../components/Header';
-import Balance from '../../components/Balance';
-import Movements from '../../components/Movements';
-import Actions from '../../components/Actions';
+import Header from '../Header';
+import Balance from '../Balance';
+import Movements from '../Movements';
+import Actions from '../Actions';
 import { useEffect, useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
+import ModalExpense from '../ModalAddExpense';
 
 
 
@@ -68,13 +69,14 @@ console.log('ENTROOU')
     <View style={styles.container}>
    
 <Header name="Aline Fedorowicz"/>
-      <Balance saldo={sumOfValues.value} gastos={subOfValues.value}/>
+      <ModalExpense/>
+      <Text style={styles.title}>Últimas Saídas</Text>
       <FlatList
 
 style={styles.list}
 data={saidas}
 keyExtrator={ (item => String (item.id))}
-showsVerticalScrollIndicator={false}
+showsVerticalScrollIndicator={true}
 renderItem={ ({item}) => <Movements data={item}/> }
 
 />

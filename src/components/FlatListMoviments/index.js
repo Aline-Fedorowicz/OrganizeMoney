@@ -31,6 +31,21 @@ const list = [
     value: 10500.00,
     date: '18/12/2023',
     type: 1 //entradas
+  },
+
+  {
+    id:4,
+    label: 'Pix',
+    value: 500.00,
+    date: '18/12/2023',
+    type: 1 //entradas
+  },
+  {
+    id:5,
+    label: 'Pix',
+    value: 500.00,
+    date: '18/12/2023',
+    type: 1 //entradas
   }
 ]
 
@@ -71,7 +86,7 @@ console.log('ENTROOU')
 style={styles.list}
 data={list}
 keyExtrator={ (item => String (item.id))}
-showsVerticalScrollIndicator={false}
+showsVerticalScrollIndicator={true}
 renderItem={ ({item}) => <Movements data={item}/> }
 
 />

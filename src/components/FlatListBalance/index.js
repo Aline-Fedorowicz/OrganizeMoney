@@ -4,13 +4,15 @@ import Balance from '../../components/Balance';
 import Movements from '../../components/Movements';
 import Actions from '../../components/Actions';
 import { useEffect, useState } from 'react';
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
+import ModalBalance from '../ModalAddBalance';
+import FormAddBalance from '../FormAddBalance';
 
 
 
 const list = [
   {
-    id:1,
+    id: 1,
     label: 'UberTrip',
     value: 45.00,
     date: '17/12/2023',
@@ -18,7 +20,7 @@ const list = [
   },
 
   {
-    id:2,
+    id: 2,
     label: 'Pix Aline',
     value: 2500.00,
     date: '17/12/2023',
@@ -26,7 +28,7 @@ const list = [
   },
 
   {
-    id:3,
+    id: 3,
     label: 'Salário',
     value: 10500.00,
     date: '18/12/2023',
@@ -36,7 +38,7 @@ const list = [
 
 
 
-const entradas = list.filter((item) => item.type === 1)  
+const entradas = list.filter((item) => item.type === 1)
 
 const saidas = list.filter((item) => item.type === 0)
 
@@ -55,31 +57,34 @@ console.log('Entradas', sumOfValues.value)
 export default function ListBalance() {
 
 
-const [load, setLoad] = useState(true)
+  const [load, setLoad] = useState(true)
 
 
-useEffect (() => {
-window.addEventListener('focus', () => setLoad(!load))
-console.log('ENTROOU')
+  useEffect(() => {
+    window.addEventListener('focus', () => setLoad(!load))
+    console.log('ENTROOU')
 
-  
-}, [load])
+
+  }, [load])
   return (
     <View style={styles.container}>
-   
-<Header name="Aline Fedorowicz"/>
-      <Balance saldo={sumOfValues.value} gastos={subOfValues.value}/>
+
+      <Header name="Aline Fedorowicz" />
+      <ModalBalance/>
+
+      <Text style={styles.title}>Últimas Entradas</Text>
       <FlatList
 
-style={styles.list}
-data={entradas}
-keyExtrator={ (item => String (item.id))}
-showsVerticalScrollIndicator={false}
-renderItem={ ({item}) => <Movements data={item}/> }
+        style={styles.list}
+        data={entradas}
+        keyExtrator={(item => String(item.id))}
+        showsVerticalScrollIndicator={true}
+        renderItem={({ item }) => <Movements data={item} />}
 
-/>
-     
-      
+      />
+
+
+
     </View>
   );
 }
@@ -89,7 +94,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgb(44 44 44)',
   },
-  title:{
+  title: {
     fontSize: 18,
     fontWeight: 'bold',
     margin: 14,
@@ -98,7 +103,7 @@ const styles = StyleSheet.create({
     color: '#DADADA'
   },
 
-  list:{
+  list: {
     marginStart: 14,
     marginEnd: 14,
 

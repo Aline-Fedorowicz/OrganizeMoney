@@ -75,7 +75,7 @@ export default function SignIn() {
                 borderColor: errors.email && 'rgb(205 70 39)'
               }]}
               onChangeText={onChange}
-              onBlur={onBlur} //chamado quando o textinput 'e trocado.
+              onBlur={onBlur} //chamado quando o nput 'e trocado.
               value={value}
               placeholder="Seu email"
             />

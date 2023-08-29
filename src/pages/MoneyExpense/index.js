@@ -7,7 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
 import { FontAwesome5 } from '@expo/vector-icons'; 
 import Home from '../Home';
-import ListExpense from '../../components/FlatListExense';
+import ListExpense from '../../components/FlatListExpense';
 
 
 export default function MoneyExpense() {
