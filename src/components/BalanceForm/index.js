@@ -56,7 +56,7 @@ export default function Balance({saldo}) {
 
 const styles = StyleSheet.create({
     container: {
-    backgroundColor: 'rgb(98, 97, 90)',
+    backgroundColor: '#DADADA',
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingStart: 18,
@@ -94,12 +94,12 @@ const styles = StyleSheet.create({
 
     balance:{
         fontSize: 22,
-        color: '#2ecc71'
+        color: '#89ca41'
     },
 
     expenses:{
         fontSize: 22,
-        color: '#e74c3c'
+        color: 'red'
         
     }
 })

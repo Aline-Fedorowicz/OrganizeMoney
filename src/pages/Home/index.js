@@ -13,7 +13,8 @@ const list = [
   {
     id: 1,
     label: 'UberTrip',
-    value: 45.00,
+    value: 45.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+    pureValue: 45.00,
     date: '17/12/2023',
     type: 0 //despesas
   },
@@ -21,7 +22,8 @@ const list = [
   {
     id: 2,
     label: 'Pix Aline',
-    value: 500.00,
+    value: 500.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+    pureValue: 500.00,
     date: '17/12/2023',
     type: 1 //entradas
   },
@@ -29,7 +31,8 @@ const list = [
   {
     id: 3,
     label: 'Salário',
-    value: 500.00,
+    value: 500.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+    pureValue: 500.00,
     date: '18/12/2023',
     type: 1 //entradas
   }
@@ -51,7 +54,7 @@ export default function Home() {
     let sum = 0
   
     for (var i = 0; i < entradas.length; i++) {
-      sum += entradas[i].value;
+      sum += entradas[i].pureValue;
   
       console.log('somaFor', sum)
     }
@@ -67,7 +70,7 @@ export default function Home() {
     let sub = 0
   
     for (var i = 0; i < saidas.length; i++) {
-      sub += saidas[i].value;
+      sub += saidas[i].pureValue;
   
       console.log('-for', sub)
     }
@@ -97,7 +100,6 @@ export default function Home() {
       <Header name="Aline Fedorowicz" />
       <Balance saldo={sumOfValues} gastos={subOfValues} />
       <Actions />
-
       <Text style={styles.title}>Últimas movimentações</Text>
       <FlatListMoviments />
 

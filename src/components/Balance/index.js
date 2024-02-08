@@ -40,7 +40,7 @@ export default function Balance({saldo, gastos}) {
             <Text style={styles.itemTitle}>Gastos</Text>
                 <View style={styles.content}>
 
-                    <Text style={styles.expenses}>{gastos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Text>
+                    <Text style={styles.expenses}>-{gastos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Text>
 
                 </View>
             </View>
@@ -54,7 +54,7 @@ export default function Balance({saldo, gastos}) {
 
 const styles = StyleSheet.create({
     container: {
-    backgroundColor: 'rgb(98, 97, 90)',
+    backgroundColor: '#2c2c2c',
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingStart: 18,
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
         paddingTop: 22,
         paddingBottom: 22,
         zIndex: 99,
+      
 
 
     },
@@ -91,13 +92,15 @@ const styles = StyleSheet.create({
     },
 
     balance:{
-        fontSize: 22,
-        color: '#2ecc71'
+        marginTop: 5,
+        fontSize: 17,
+        color: '#89ca41'
     },
 
     expenses:{
-        fontSize: 22,
-        color: '#e74c3c'
+        marginTop: 5,
+        fontSize: 17,
+        color: 'red'
         
     }
 })

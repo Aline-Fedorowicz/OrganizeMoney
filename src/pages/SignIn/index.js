@@ -72,7 +72,7 @@ export default function SignIn() {
             <TextInput
               style={[styles.input, {
                 borderWidth: errors.email && 1,
-                borderColor: errors.email && 'rgb(205 70 39)'
+                borderColor: errors.email && '#89ca41'
               }]}
               onChangeText={onChange}
               onBlur={onBlur} //chamado quando o nput 'e trocado.
@@ -96,7 +96,7 @@ export default function SignIn() {
             <TextInput
               style={[styles.input, {
                 borderWidth: errors.password && 1,
-                borderColor: errors.password && 'rgb(205 70 39)'
+                borderColor: errors.password && '#89ca41'
               }]}
               onChangeText={onChange}
               onBlur={onBlur} //chamado quando o textinput 'e trocado.
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
 
   labelError: {
     alignSelf: 'flex-start',
-    color: 'rgb(205 70 39)',
+    color: '#89ca41',
     marginBottom: 8
   },
   iconInput: {

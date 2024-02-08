@@ -43,28 +43,7 @@ const schema = yup.object({
   
         <Animatable.View animation="fadeInUp" style={styles.containerForm}>
   
-          <Controller
-            control={control}
-            name="name"
-            render={({ field: { onChange, onBlur, value } }) => (
-              <TextInput
-                style={[styles.input, {
-                  borderWidth: errors.name && 1,
-                  borderColor: errors.name && 'rgb(205 70 39)'
-                }]}
-                onChangeText={onChange}
-                onBlur={onBlur} //chamado quando o nput 'e trocado.
-                value={value}
-                placeholder="Nome do movimento financeiro"
-              />
-  
-            )}
-          />
-  
-  
-  
-          {errors.name && <Text style={styles.labelError}>{errors.name?.message}</Text>}
-  
+      
 
           <Controller
             control={control}
@@ -73,12 +52,12 @@ const schema = yup.object({
               <TextInput
                 style={[styles.input, {
                   borderWidth: errors.date && 1,
-                  borderColor: errors.date && 'rgb(205 70 39)'
+                  borderColor: errors.date && '#89ca41'
                 }]}
                 onChangeText={onChange}
                 onBlur={onBlur} //chamado quando o nput 'e trocado.
                 value={value}
-                placeholder="Data"
+                placeholder="01/03"
               />
   
             )}
@@ -98,12 +77,12 @@ const schema = yup.object({
               <TextInput
                 style={[styles.input, {
                   borderWidth: errors.value && 1,
-                  borderColor: errors.value && 'rgb(205 70 39)'
+                  borderColor: errors.value && '#89ca41'
                 }]}
                 onChangeText={onChange}
                 onBlur={onBlur} //chamado quando o nput 'e trocado.
                 value={value}
-                placeholder="Valor"
+                placeholder="00,00"
               />
   
             )}
@@ -129,19 +108,21 @@ const schema = yup.object({
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'rgb(118 39 20)'
+      backgroundColor: '#89ca41',
+    
+  
   
     },
     containerHeader: {
-      marginTop: '14%',
-      marginBottom: '8%',
-      padding: '5%'
+      margin: 10,
+      
     },
   
     message: {
-      fontSize: 28,
+      fontSize: 20,
       fontWeight: 'bold',
-      color: '#DADADA'
+      color: '#000000',
+      width: 320
     },
   
     containerForm: {
@@ -151,7 +132,7 @@ const schema = yup.object({
       borderTopRightRadius: 25,
       paddingStart: '5%',
       paddingEnd: '5%',
-      paddingTop: 14
+      paddingTop: 20
   
     },
     title: {
@@ -161,25 +142,26 @@ const schema = yup.object({
     },
     input: {
       borderBottomWidth: 1,
-      height: 40,
+      height: 20,
       marginBottom: 12,
       fontSize: 16,
       color: '#A9A9A9',
     },
     button: {
-      backgroundColor: 'rgb(118 39 20)',
+      backgroundColor: '#89ca41',
       width: '100%',
       borderRadius: 4,
       paddingVertical: 8,
       marginTop: 14,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      marginBottom: 20
     },
   
     buttonText: {
-      color: '#DADADA',
+      color: '#000000',
       fontSize: 18,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
   
     },
     buttonRegister: {
@@ -194,7 +176,7 @@ const schema = yup.object({
   
     labelError: {
       alignSelf: 'flex-start',
-      color: 'rgb(205 70 39)',
+      color: '#89ca41',
       marginBottom: 8
     },
     iconInput: {

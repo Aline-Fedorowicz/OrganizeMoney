@@ -66,13 +66,13 @@ const styles = StyleSheet.create({
 
     value: {
         fontSize: 16,
-        color: '#2ecc71',
+        color: '#89ca41',
         fontWeight: 'bold'
     },
 
     expenses: {
         fontSize: 16,
-        color: '#e74c3c',
+        color: 'red',
         fontWeight: 'bold'
     },
     skeleton: {

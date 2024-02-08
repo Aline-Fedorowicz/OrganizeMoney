@@ -74,7 +74,7 @@ export default function ModalBalance() {
 
                    
                         <TouchableOpacity onPress={onClose} style={[styles.button]}>
-                            <Text style={styles.buttonText}>Cancelar</Text>
+                            <Text style={styles.buttonText}>Voltar</Text>
                         </TouchableOpacity>
 
 
@@ -95,19 +95,18 @@ export default function ModalBalance() {
 
 const styles = StyleSheet.create({
     container: {
-    backgroundColor: 'rgb(98, 97, 90)',
-    justifyContent: 'center',
-    zIndex:99
-    
-
-
+        backgroundColor: '#89ca41',
+        justifyContent: 'center',
+        zIndex:99,
+        margin: 20,
     },
 
     itemTitle:{
         fontSize: 20,
-        color: '#DADADA',
+        color: '#000000',
         textAlign: 'center',
-        padding: 14
+        padding: 14,
+        
      
         
 
@@ -122,14 +121,14 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: 'black',
-        width: '100%',
+        backgroundColor: '#62615a',
+        width: 300,
         borderRadius: 4,
         paddingVertical: 8,
-        marginTop: 14,
         justifyContent: 'center',
         alignItems: 'center',
-        width: 'i'
+        marginBottom: 20,
+        marginTop: 3
         
       },
     

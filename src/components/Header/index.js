@@ -65,7 +65,7 @@ export default function Header({name}){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: 'rgb(118 39 20)',
+        backgroundColor: '#89ca41',
         paddingTop: statusBarHeight,
         flexDirection:'row',
         paddingStart: 16,
@@ -83,13 +83,13 @@ const styles = StyleSheet.create({
     username:{
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#DADADA'
+        color: '#ffffff'
     },
 
     buttonUser:{
         width: 44,
         height: 44,
-        backgroundColor: 'rgba(255,255,255,0.5)',
+        backgroundColor: '#2c2c2c',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 44/2,

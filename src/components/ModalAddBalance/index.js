@@ -9,6 +9,7 @@ import {MotiView} from 'moti'
 import { Modalize } from 'react-native-modalize';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import FormAddBalance from '../FormAddBalance';
+import { opacity } from 'react-native-reanimated';
 
 export default function ModalBalance() {
     const modalizeRef = useRef(null)
@@ -44,6 +45,7 @@ export default function ModalBalance() {
                     <Text style={styles.itemTitle}> Adicionar Entrada</Text>
                 </TouchableOpacity>
 
+
                 <Modalize 
                 ref={modalizeRef}
                 snapPoint={900}
@@ -73,7 +75,7 @@ export default function ModalBalance() {
 
                    
                         <TouchableOpacity onPress={onClose} style={[styles.button]}>
-                            <Text style={styles.buttonText}>Cancelar</Text>
+                            <Text style={styles.buttonText}>Voltar</Text>
                         </TouchableOpacity>
 
 
@@ -94,19 +96,21 @@ export default function ModalBalance() {
 
 const styles = StyleSheet.create({
     container: {
-    backgroundColor: 'rgb(98, 97, 90)',
+    backgroundColor: '#89ca41',
     justifyContent: 'center',
-    zIndex:99
-    
+    zIndex:99,
+    margin: 20,
+   
 
 
     },
 
     itemTitle:{
         fontSize: 20,
-        color: '#DADADA',
+        color: '#000000',
         textAlign: 'center',
-        padding: 14
+        padding: 14,
+        
      
         
 
@@ -121,14 +125,14 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: 'black',
-        width: '100%',
+        backgroundColor: '#62615a',
+        width: 300,
         borderRadius: 4,
         paddingVertical: 8,
-        marginTop: 14,
         justifyContent: 'center',
         alignItems: 'center',
-        width: 'i'
+        marginBottom: 20,
+        marginTop: 3
         
       },
     
@@ -141,7 +145,7 @@ const styles = StyleSheet.create({
 
     buttonTitle:{
         fontSize: 20,
-        color: '#DADADA',
+        color: '#000000',
         textAlign: 'center',
         padding: 14
      

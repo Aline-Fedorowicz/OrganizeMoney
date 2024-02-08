@@ -11,25 +11,28 @@ import ModalExpense from '../ModalAddExpense';
 
 const list = [
   {
-    id:1,
+    id: 1,
     label: 'UberTrip',
-    value: 45.00,
+    value: 45.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+    pureValue: 45.00,
     date: '17/12/2023',
     type: 0 //despesas
   },
 
   {
-    id:2,
+    id: 2,
     label: 'Pix Aline',
-    value: 2500.00,
+    value: 500.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+    pureValue: 500.00,
     date: '17/12/2023',
     type: 1 //entradas
   },
 
   {
-    id:3,
+    id: 3,
     label: 'Salário',
-    value: 10500.00,
+    value: 500.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
+    pureValue: 500.00,
     date: '18/12/2023',
     type: 1 //entradas
   }

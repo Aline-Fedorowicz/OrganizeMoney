@@ -38,7 +38,7 @@ export default function Movements({data}) {
            }}
            >
 
-           {data.type === 1 ? `R$ ${data.value} ` : `R$-${data.value} `}
+           {data.type === 1 ? ` ${data.value} ` : `-${data.value} `}
            
            
            </MotiText>
@@ -88,7 +88,9 @@ const styles = StyleSheet.create({
 
     date:{
 
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#ffffff',
+        fontSize: 12
     },
 
     label:{
@@ -100,13 +102,13 @@ const styles = StyleSheet.create({
 
     value:{
         fontSize: 16,
-        color: '#2ecc71',
+        color: '#89ca41',
         fontWeight: 'bold'
     },
 
     expenses:{
         fontSize: 16,
-        color:'#e74c3c',
+        color:'red',
         fontWeight:'bold'
     },
     skeleton: {
