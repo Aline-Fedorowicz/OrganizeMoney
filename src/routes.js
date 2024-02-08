@@ -30,6 +30,7 @@ export function Routes() {
                 options={{ headerShown: false }}
             /> */}
 
+
             <Stack.Screen
                 name="BarNavigation"
                 component={BarNavigation}

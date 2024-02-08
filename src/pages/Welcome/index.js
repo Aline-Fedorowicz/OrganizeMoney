@@ -19,7 +19,7 @@ export default function Welcome() {
     <View style={styles.container}>
 
       <View style={styles.containerLogo}>
-      <MaterialCommunityIcons name="finance" size={200} color="#DADADA"  />
+      <MaterialCommunityIcons name="piggy-bank-outline" size={200} color="#ffffff"  />
       </View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
@@ -46,12 +46,12 @@ export default function Welcome() {
 const styles= StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor: 'rgb(118 39 20)'
+    backgroundColor: '#89ca41'
 
   },
    containerLogo:{
     flex: 2,
-    backgroundColor: 'rgb(118 39 20)',
+    backgroundColor: '#89ca41',
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -68,14 +68,14 @@ const styles= StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 28,
     marginBottom: 12,
-    color: '#DADADA'
+    color: '#ffffff'
   },
   text: {
-    color: '#A9A9A9'
+    color: '#DADADA'
   },
   button:{
     position: 'absolute',
-    backgroundColor: 'rgb(118 39 20)',
+    backgroundColor: '#89ca41',
     borderRadius: 50,
     paddingVertical: 8,
     width:'60%',
@@ -87,7 +87,7 @@ const styles= StyleSheet.create({
 
   buttonText: {
     fontSize: 18,
-    color: '#DADADA',
+    color: '#000000',
     fontWeight: 'bold'
   }
   

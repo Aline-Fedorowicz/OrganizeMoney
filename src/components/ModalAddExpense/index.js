@@ -42,7 +42,7 @@ export default function ModalBalance() {
 
             <View style={styles.item}>
                 <TouchableOpacity onPress={onOpen}>
-                    <Text style={styles.itemTitle}> Adicionar Despesa</Text>
+                    <Text style={styles.itemTitle}> Adicionar Saída</Text>
                 </TouchableOpacity>
 
                 <Modalize 
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
         color: '#000000',
         textAlign: 'center',
         padding: 14,
+        fontWeight: 'bold'
         
      
         

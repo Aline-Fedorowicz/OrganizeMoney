@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
         color: '#000000',
         textAlign: 'center',
         padding: 14,
+        fontWeight: 'bold'
         
      
         

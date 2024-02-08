@@ -60,7 +60,7 @@ export default function SignIn() {
   return (
     <View style={styles.container}>
       <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-        <Text style={styles.message}>Bem-vindo(a)</Text>
+        <Text style={styles.message}>BEM VINDO</Text>
       </Animatable.View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
@@ -77,7 +77,7 @@ export default function SignIn() {
               onChangeText={onChange}
               onBlur={onBlur} //chamado quando o nput 'e trocado.
               value={value}
-              placeholder="Seu email"
+              placeholder="Email"
             />
 
           )}
@@ -146,7 +146,7 @@ export default function SignIn() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(118 39 20)'
+    backgroundColor: '#89ca41'
 
   },
   containerHeader: {
@@ -167,23 +167,26 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     paddingStart: '5%',
-    paddingEnd: '5%'
+    paddingEnd: '5%',
+   
 
   },
   title: {
     fontSize: 20,
     marginTop: 28,
-    color: '#DADADA'
+    color: '#000000'
   },
   input: {
     borderBottomWidth: 1,
     height: 40,
     marginBottom: 12,
     fontSize: 16,
-    color: '#A9A9A9',
+    color: '#DADADA',
+    marginTop: 20,
+    margin: 10
   },
   button: {
-    backgroundColor: 'rgb(118 39 20)',
+    backgroundColor: '#89ca41',
     width: '100%',
     borderRadius: 4,
     paddingVertical: 8,
@@ -193,7 +196,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: '#DADADA',
+    color: '#000000',
     fontSize: 18,
     fontWeight: 'bold'
 
@@ -205,7 +208,7 @@ const styles = StyleSheet.create({
   },
 
   registerText: {
-    color: '#A9A9A9',
+    color: '#DADADA',
   },
 
   labelError: {

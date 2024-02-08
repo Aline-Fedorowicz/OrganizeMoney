@@ -85,7 +85,7 @@ const schema = yup.object({
                 onChangeText={onChange}
                 onBlur={onBlur} //chamado quando o nput 'e trocado.
                 value={value}
-                placeholder="R$00,00"
+                placeholder="00,00"
               />
   
             )}
@@ -122,7 +122,7 @@ const schema = yup.object({
     },
   
     message: {
-      fontSize: 20,
+      fontSize: 17,
       fontWeight: 'bold',
       color: '#000000',
       width: 320
@@ -148,7 +148,7 @@ const schema = yup.object({
       height: 20,
       marginBottom: 12,
       fontSize: 16,
-      color: '#A9A9A9',
+      color: '#DADADA',
     },
     button: {
       backgroundColor: '#89ca41',
@@ -174,7 +174,7 @@ const schema = yup.object({
     },
   
     registerText: {
-      color: '#A9A9A9',
+      color: '#DADADA',
     },
   
     labelError: {
