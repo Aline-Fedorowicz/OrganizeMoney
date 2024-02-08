@@ -1,7 +1,7 @@
 
 
    <p align="center">
-    <img  src="assets/Organize Money.png" style="max-width: 100%;">
+    <img  src="assets/OrganizeMoney.png" style="max-width: 100%;">
 
 
 </p>
