@@ -109,6 +109,7 @@ const schema = yup.object({
     container: {
       flex: 1,
       backgroundColor: '#89ca41',
+
     
   
   
@@ -122,7 +123,8 @@ const schema = yup.object({
       fontSize: 17,
       fontWeight: 'bold',
       color: '#000000',
-      width: 320
+      width: '100%',
+      margin: 3
     },
   
     containerForm: {
