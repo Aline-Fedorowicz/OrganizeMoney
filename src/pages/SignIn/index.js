@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#DADADA'
+    color: '#ffffff'
   },
 
   containerForm: {
